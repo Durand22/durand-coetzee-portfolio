@@ -1,0 +1,14 @@
+#!/bin/sh
+set -e
+
+echo "Codex pre-push checks..."
+
+if [ -f package.json ] && command -v npm >/dev/null 2>&1; then
+  npm test --if-present
+fi
+
+if [ -f pyproject.toml ] && command -v pytest >/dev/null 2>&1; then
+  pytest
+fi
+
+echo "Codex pre-push checks passed."

@@ -1,0 +1,18 @@
+#!/bin/sh
+set -e
+
+echo "Codex pre-commit checks..."
+
+if command -v git >/dev/null 2>&1; then
+  git diff --check
+fi
+
+if [ -f package.json ] && command -v npm >/dev/null 2>&1; then
+  npm run lint --if-present
+fi
+
+if [ -f pyproject.toml ] && command -v python >/dev/null 2>&1; then
+  python -m compileall . >/dev/null
+fi
+
+echo "Codex pre-commit checks passed."

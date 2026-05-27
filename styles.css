@@ -158,6 +158,8 @@ p {
 .tab:focus-visible,
 .project a:hover,
 .project a:focus-visible,
+.project-link:hover,
+.project-link:focus-visible,
 .contact-list a:hover,
 .contact-list a:focus-visible {
   outline: 3px solid rgba(15, 118, 110, 0.18);
@@ -312,10 +314,18 @@ p {
   flex-direction: column;
 }
 
-.project a {
+.project a,
+.project-link {
   margin-top: auto;
   color: var(--accent-dark);
+  background: transparent;
+  border: 0;
+  padding: 0;
+  font: inherit;
   font-weight: 900;
+  text-align: left;
+  text-decoration: underline;
+  cursor: pointer;
 }
 
 .skills {
@@ -333,7 +343,8 @@ p {
   grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
-.contact-list a {
+.contact-list a,
+.contact-item {
   display: flex;
   min-height: 96px;
   flex-direction: column;
@@ -346,7 +357,8 @@ p {
   text-decoration: none;
 }
 
-.contact-list span {
+.contact-list span,
+.contact-item span {
   margin-bottom: 7px;
   color: var(--muted);
   font-size: 0.82rem;

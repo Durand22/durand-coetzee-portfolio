@@ -1,7 +1,7 @@
 const tabs = Array.from(document.querySelectorAll('[role="tab"]'));
 const panels = Array.from(document.querySelectorAll('[role="tabpanel"]'));
 
-function activateTab(tab) {
+function activateTab(tab, shouldFocus = false) {
   tabs.forEach((item) => {
     const isActive = item === tab;
     item.classList.toggle('is-active', isActive);
@@ -14,6 +14,10 @@ function activateTab(tab) {
     panel.classList.toggle('is-active', isActive);
     panel.hidden = !isActive;
   });
+
+  if (shouldFocus) {
+    tab.focus();
+  }
 }
 
 tabs.forEach((tab, index) => {
@@ -33,7 +37,29 @@ tabs.forEach((tab, index) => {
 
     event.preventDefault();
     const nextTab = tabs[keyMap[event.key]];
-    activateTab(nextTab);
-    nextTab.focus();
+    activateTab(nextTab, true);
   });
+});
+
+document.addEventListener('click', (event) => {
+  const link = event.target.closest('[data-open-tab]');
+
+  if (!link) {
+    return;
+  }
+
+  const targetTab = document.getElementById(link.dataset.openTab);
+
+  if (!targetTab) {
+    return;
+  }
+
+  const targetPanel = document.getElementById(targetTab.getAttribute('aria-controls'));
+
+  event.preventDefault();
+  activateTab(targetTab, true);
+
+  if (targetPanel) {
+    targetPanel.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
 });

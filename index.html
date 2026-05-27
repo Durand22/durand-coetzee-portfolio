@@ -1,0 +1,210 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Mara Portfolio</title>
+    <meta
+      name="description"
+      content="A compact professional portfolio with CV, projects, skills, and contact details."
+    >
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <main class="shell">
+      <section class="profile" aria-labelledby="profile-name">
+        <div class="profile__intro">
+          <p class="eyebrow">Portfolio and CV</p>
+          <h1 id="profile-name">Mara [Your Surname]</h1>
+          <p class="role">Junior Developer / Digital Professional</p>
+          <p class="summary">
+            Replace this with a short, confident summary about who you are,
+            the work you enjoy, and the value you bring to teams or clients.
+          </p>
+          <div class="actions" aria-label="Primary actions">
+            <a class="button button--primary" href="assets/cv.pdf" download>Download CV</a>
+            <a class="button" href="mailto:you@example.com">Email Me</a>
+          </div>
+        </div>
+        <aside class="snapshot" aria-label="Profile snapshot">
+          <div>
+            <span class="snapshot__label">Location</span>
+            <strong>City, Country</strong>
+          </div>
+          <div>
+            <span class="snapshot__label">Focus</span>
+            <strong>Web, support, operations</strong>
+          </div>
+          <div>
+            <span class="snapshot__label">Available for</span>
+            <strong>Internships, junior roles, freelance</strong>
+          </div>
+        </aside>
+      </section>
+
+      <section class="tabs-card" aria-label="Portfolio sections">
+        <div class="tablist" role="tablist" aria-label="Portfolio tabs">
+          <button class="tab is-active" id="tab-about" role="tab" type="button" aria-selected="true" aria-controls="panel-about">
+            About
+          </button>
+          <button class="tab" id="tab-cv" role="tab" type="button" aria-selected="false" aria-controls="panel-cv" tabindex="-1">
+            CV
+          </button>
+          <button class="tab" id="tab-projects" role="tab" type="button" aria-selected="false" aria-controls="panel-projects" tabindex="-1">
+            Projects
+          </button>
+          <button class="tab" id="tab-skills" role="tab" type="button" aria-selected="false" aria-controls="panel-skills" tabindex="-1">
+            Skills
+          </button>
+          <button class="tab" id="tab-contact" role="tab" type="button" aria-selected="false" aria-controls="panel-contact" tabindex="-1">
+            Contact
+          </button>
+        </div>
+
+        <div class="panels">
+          <section class="panel is-active" id="panel-about" role="tabpanel" aria-labelledby="tab-about">
+            <div class="section-heading">
+              <p class="eyebrow">About</p>
+              <h2>Clear, reliable, and ready to grow.</h2>
+            </div>
+            <p>
+              Add two or three sentences about your background, what you are
+              currently learning or doing, and the kind of work you want to do
+              next. Keep this direct and personal.
+            </p>
+            <div class="highlights">
+              <article>
+                <h3>What I Do</h3>
+                <p>Describe your strongest work area, such as web support, admin systems, design, coding, or customer-facing digital work.</p>
+              </article>
+              <article>
+                <h3>How I Work</h3>
+                <p>Describe your working style: organized, curious, dependable, quick to learn, and comfortable solving practical problems.</p>
+              </article>
+            </div>
+          </section>
+
+          <section class="panel" id="panel-cv" role="tabpanel" aria-labelledby="tab-cv" hidden>
+            <div class="section-heading section-heading--split">
+              <div>
+                <p class="eyebrow">CV</p>
+                <h2>Experience and education</h2>
+              </div>
+              <a class="button button--compact" href="assets/cv.pdf" download>Download PDF</a>
+            </div>
+            <div class="timeline">
+              <article class="timeline__item">
+                <span>2025 - Present</span>
+                <div>
+                  <h3>Role Title - Company or Organization</h3>
+                  <p>Add a concise description of your role, responsibilities, and measurable achievements.</p>
+                </div>
+              </article>
+              <article class="timeline__item">
+                <span>2023 - 2025</span>
+                <div>
+                  <h3>Previous Role or Training</h3>
+                  <p>Add relevant experience, volunteer work, coursework, or practical projects.</p>
+                </div>
+              </article>
+              <article class="timeline__item">
+                <span>Education</span>
+                <div>
+                  <h3>Qualification - Institution</h3>
+                  <p>Add your qualification, certifications, or current study path.</p>
+                </div>
+              </article>
+            </div>
+          </section>
+
+          <section class="panel" id="panel-projects" role="tabpanel" aria-labelledby="tab-projects" hidden>
+            <div class="section-heading">
+              <p class="eyebrow">Projects</p>
+              <h2>Selected work</h2>
+            </div>
+            <div class="project-grid">
+              <article class="project">
+                <span class="tag">Web</span>
+                <h3>Project Name</h3>
+                <p>Describe the problem, your contribution, and the result in one or two clear sentences.</p>
+                <a href="#" aria-label="View Project Name project">View project</a>
+              </article>
+              <article class="project">
+                <span class="tag">Portfolio</span>
+                <h3>Case Study Title</h3>
+                <p>Use this for a school project, client task, design sample, or personal build.</p>
+                <a href="#" aria-label="View Case Study Title project">View project</a>
+              </article>
+              <article class="project">
+                <span class="tag">Learning</span>
+                <h3>Practice Build</h3>
+                <p>Show what you learned, which tools you used, and what you would improve next.</p>
+                <a href="#" aria-label="View Practice Build project">View project</a>
+              </article>
+            </div>
+          </section>
+
+          <section class="panel" id="panel-skills" role="tabpanel" aria-labelledby="tab-skills" hidden>
+            <div class="section-heading">
+              <p class="eyebrow">Skills</p>
+              <h2>Tools and strengths</h2>
+            </div>
+            <div class="skills">
+              <div>
+                <h3>Technical</h3>
+                <ul>
+                  <li>HTML, CSS, JavaScript</li>
+                  <li>Responsive web pages</li>
+                  <li>Git and GitHub basics</li>
+                </ul>
+              </div>
+              <div>
+                <h3>Professional</h3>
+                <ul>
+                  <li>Communication</li>
+                  <li>Problem solving</li>
+                  <li>Planning and organization</li>
+                </ul>
+              </div>
+              <div>
+                <h3>Learning Next</h3>
+                <ul>
+                  <li>React or another frontend framework</li>
+                  <li>APIs and backend basics</li>
+                  <li>Testing and deployment</li>
+                </ul>
+              </div>
+            </div>
+          </section>
+
+          <section class="panel" id="panel-contact" role="tabpanel" aria-labelledby="tab-contact" hidden>
+            <div class="section-heading">
+              <p class="eyebrow">Contact</p>
+              <h2>Let us connect</h2>
+            </div>
+            <div class="contact-list">
+              <a href="mailto:you@example.com">
+                <span>Email</span>
+                you@example.com
+              </a>
+              <a href="tel:+27000000000">
+                <span>Phone</span>
+                +27 00 000 0000
+              </a>
+              <a href="https://www.linkedin.com/" target="_blank" rel="noreferrer">
+                <span>LinkedIn</span>
+                linkedin.com/in/your-profile
+              </a>
+              <a href="https://github.com/" target="_blank" rel="noreferrer">
+                <span>GitHub</span>
+                github.com/your-username
+              </a>
+            </div>
+          </section>
+        </div>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://durand22.github.io/portfolio/sitemap.xml
+Sitemap: https://durand22.github.io/durand-coetzee-portfolio/sitemap.xml
